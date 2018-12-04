@@ -1,0 +1,12 @@
+
+
+
+
+#pg for development
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: sample_postgres_development
+  pool: 5
+  username: thanhmancity
+  password:

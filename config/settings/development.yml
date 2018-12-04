@@ -1,0 +1,5 @@
+paypal:
+  amount: 4.99
+  amount_group: 10.99
+  item: paypal name bcc testing
+  instance: Paypal instance for testing

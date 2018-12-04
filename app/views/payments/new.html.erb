@@ -1,0 +1,34 @@
+  <div>
+<h2>
+<strong>Pay on Paypal</strong>
+</h2>
+</div>
+<div>
+<div class='row'>
+<div class='row col-md-6 col-md-offset-3'>
+<form class="new_payment" id="new_payment" action="/payments" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="kk1+htr2QUIioRzbt6FMPw59xBhswlw+8gC6vrrUchwjfIVW3BzI70G2eremCC51DXYlIN5/exO/aTbu6CL7BQ==" /><div class='form-group'>
+<label for="payment_quantity">Quantity</label>
+<input type="text" name="payment[quantity]" id="payment_quantity" />
+</div>
+<input type="image" name="commit" value="Pay on Paypal" class="btn btn-primary btn-medium center-block" id="paypal_submit" src="https://www.paypal.com/en_US/i/btn/btn_dg_pay_w_paypal.gif" data-disable-with="Pay on Paypal" />
+</form></div>
+</div>
+</div>
+<script src='https://www.paypalobjects.com/js/external/dg.js'></script>
+<script>
+  $(function(){
+    var sandbox = true;
+    var submit_id = 'paypal_submit';
+    flow_config = {trigger: submit_id};
+    if (sandbox) flow_config.stage = sandbox;
+    window.paypal_flows = [];
+    window.paypal_flows.push(new PAYPAL.apps.DGFlow(flow_config));
+
+    $("#payment_customer_type_collection").click(function(){
+      $(".customer").show();
+    })
+    $("#payment_customer_type_user").click(function(){
+      $(".customer").hide();
+    })
+  });
+</script>

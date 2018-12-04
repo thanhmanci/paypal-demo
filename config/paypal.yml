@@ -1,0 +1,14 @@
+development: &sandbox
+  username: <%= ENV["USERNAME"] %>
+  password: <%= ENV["PASSWORD"] %>
+  signature: <%= ENV["SIGNATURE"] %>
+  sandbox: false
+
+test:
+  <<: *sandbox
+
+production: &production
+  username: <%= ENV["USERNAME"] %>
+  password: <%= ENV["PASSWORD"] %>
+  signature: <%= ENV["SIGNATURE"] %>
+  sandbox: false

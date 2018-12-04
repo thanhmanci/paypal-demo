@@ -1,0 +1,30 @@
+meta: meta
+code: code
+status_code: status_code
+content: content
+http_code:
+  code_200: 200
+  code_201: 201
+  code_403: 403
+  code_404: 404
+  code_400: 400
+
+status_codes:
+  error: 600
+  unauthorized: 601
+  forbidden: 603
+  not_found: 604
+  render_success: 800
+status:
+  unauthorized: 401
+  login_success: LGS
+  signup_success: SGS
+  logout_success: ULO200
+  logout_failure: ULO400
+  collection_create_success: CCS
+  collection_destroy_success: CDS
+  collection_destroy_failure: CDF
+  get_user_success: GU200
+  collection_add_user_success: CAUS
+  collection_remove_user_success: CRMUS
+  get_collection_success: UGCS
